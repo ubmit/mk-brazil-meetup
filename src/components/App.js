@@ -1,8 +1,15 @@
 import React, { Component } from 'react';
+import Header from './Header';
+import SimpleSlider from './SimpleSlider';
 
 class App extends Component {
   render() {
-    return <h3>hey!</h3>;
+    return (
+      <div>
+        <Header />
+        <SimpleSlider />
+      </div>
+    );
   }
 }
 
