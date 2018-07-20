@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import CardExampleCard from './Card';
+import KeyboardCard from './KeyboardCard';
 
 class SimpleSlider extends React.Component {
   render() {
@@ -9,38 +9,39 @@ class SimpleSlider extends React.Component {
       infinite: true,
       speed: 500,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      adaptiveHeight: true
     };
     return (
       <Slider {...settings}>
         <div>
           <h3>
-            <CardExampleCard />
+            <KeyboardCard />
           </h3>
         </div>
         <div>
           <h3>
-            <CardExampleCard />
+            <KeyboardCard />
           </h3>
         </div>
         <div>
           <h3>
-            <CardExampleCard />
+            <KeyboardCard />
           </h3>
         </div>
         <div>
           <h3>
-            <CardExampleCard />
+            <KeyboardCard />
           </h3>
         </div>
         <div>
           <h3>
-            <CardExampleCard />
+            <KeyboardCard />
           </h3>
         </div>
         <div>
           <h3>
-            <CardExampleCard />
+            <KeyboardCard />
           </h3>
         </div>
       </Slider>

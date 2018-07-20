@@ -1,40 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Menu } from 'semantic-ui-react';
 
-export default class Header extends Component {
-  state = {};
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
-
-  render() {
-    const { activeItem } = this.state;
-
-    return (
-      <Menu>
-        <Menu.Item
-          name="editorials"
-          active={activeItem === 'editorials'}
-          onClick={this.handleItemClick}
-        >
-          Editorials
-        </Menu.Item>
-
-        <Menu.Item
-          name="reviews"
-          active={activeItem === 'reviews'}
-          onClick={this.handleItemClick}
-        >
-          Reviews
-        </Menu.Item>
-
-        <Menu.Item
-          name="upcomingEvents"
-          active={activeItem === 'upcomingEvents'}
-          onClick={this.handleItemClick}
-        >
-          Upcoming Events
-        </Menu.Item>
-      </Menu>
-    );
+const styles = {
+  header: {
+    marginBottom: 20
   }
-}
+};
+
+const Header = () => {
+  return (
+    <Menu widths={1} style={styles.header}>
+      <Menu.Item name="meetup">Mechanical Keyboards - Brazil Meetup</Menu.Item>
+    </Menu>
+  );
+};
+
+export default Header;

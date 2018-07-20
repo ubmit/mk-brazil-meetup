@@ -1,13 +1,34 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import SimpleSlider from './SimpleSlider';
+import KeyboardCard from './KeyboardCard';
+import { Container, Grid } from 'semantic-ui-react';
 
 class App extends Component {
+  renderCards() {
+    // return all the existing keyboards
+  }
+
   render() {
     return (
       <div>
         <Header />
-        <SimpleSlider />
+        <Container>
+          <KeyboardCard />
+          {/* <Grid columns={4}>
+            <Grid.Column>
+              <KeyboardCard />
+            </Grid.Column>
+            <Grid.Column>
+              <KeyboardCard />
+            </Grid.Column>
+            <Grid.Column>
+              <KeyboardCard />
+            </Grid.Column>
+            <Grid.Column>
+              <KeyboardCard />
+            </Grid.Column>
+          </Grid> */}
+        </Container>
       </div>
     );
   }
