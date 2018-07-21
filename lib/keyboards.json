@@ -1,0 +1,46 @@
+[
+  { 
+    "name":"TADA68",
+    "size":65,
+    "type":"staggered",
+    "split":false,
+    "switches":"Aliaz 70g",
+    "keycaps":"stock",
+    "description":"I built this keyboard for Camila",
+    "image":"https://i.imgur.com/vRNixkA.jpg",
+    "owner":"ubmit"
+  },
+  { 
+    "name":"testando 1",
+    "size":65,
+    "type":"staggered",
+    "split":false,
+    "switches":"Aliaz 70g",
+    "keycaps":"stock",
+    "description":"I built this keyboard for Camila",
+    "image":"https://i.imgur.com/vRNixkA.jpg",
+    "owner":"ubmit"
+  },
+  { 
+    "name":"testando 2",
+    "size":65,
+    "type":"staggered",
+    "split":false,
+    "switches":"Aliaz 70g",
+    "keycaps":"stock",
+    "description":"I built this keyboard for Camila",
+    "image":"https://i.imgur.com/vRNixkA.jpg",
+    "owner":"ubmit"
+  },
+  { 
+    "name":"testando 3",
+    "size":65,
+    "type":"staggered",
+    "split":false,
+    "switches":"Aliaz 70g",
+    "keycaps":"stock",
+    "description":"I built this keyboard for Camila",
+    "image":"https://i.imgur.com/vRNixkA.jpg",
+    "owner":"ubmit"
+  }
+]
