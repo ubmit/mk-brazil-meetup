@@ -10,7 +10,9 @@ const styles = {
 const Header = () => {
   return (
     <Menu widths={1} style={styles.header}>
-      <Menu.Item name="meetup">Mechanical Keyboards - Brazil Meetup</Menu.Item>
+      <Menu.Item name="meetup">
+        Mechanical Keyboards Brazil - #1 Meetup
+      </Menu.Item>
     </Menu>
   );
 };

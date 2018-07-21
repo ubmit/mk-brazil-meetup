@@ -3,20 +3,18 @@ import { Card, Icon, Image } from 'semantic-ui-react';
 
 const KeyboardCard = () => (
   <Card>
+    <Image src="https://instagram.frec5-1.fna.fbcdn.net/vp/c45be4ab84aade39f076143810dd3d3c/5BD6FA8E/t51.2885-15/e35/35574458_447766728980013_6753232587105239040_n.jpg" />
     <Card.Content>
-      <Image src='https://react.semantic-ui.com/images/avatar/large/matthew.png'/>
-      <Card.Header>Matthew</Card.Header>
-      <Card.Meta>
-        <span className="date">Joined in 2015</span>
-      </Card.Meta>
+      <Card.Header>Fourier</Card.Header>
       <Card.Description>
-        Matthew is a musician living in Nashville.
+        A 40% split keyboard with Kailh BOX Dark Yellow switches and EnjoyPBT
+        blanks.
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
       <a>
         <Icon name="user" />
-        22 Friends
+        ubmit
       </a>
     </Card.Content>
   </Card>
