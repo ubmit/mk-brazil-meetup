@@ -1,1 +1,0 @@
-export const FETCH_KEYBOARDS = 'FETCH_KEYBOARDS';

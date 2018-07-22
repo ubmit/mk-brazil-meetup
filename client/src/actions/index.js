@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { FETCH_KEYBOARDS } from './types';
+
+export const FETCH_KEYBOARDS = 'FETCH_KEYBOARDS';
 
 export const fetchKeyboards = () => {
   const request = axios.get('/api/keyboards');

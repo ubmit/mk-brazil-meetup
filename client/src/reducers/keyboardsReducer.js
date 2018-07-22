@@ -1,4 +1,4 @@
-import { FETCH_KEYBOARDS } from '../actions/types';
+import { FETCH_KEYBOARDS } from '../actions';
 
 export default function(state = [], action) {
   switch (action.type) {
