@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import KeyboardCard from '../components/KeyboardCard';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Container } from 'semantic-ui-react';
 import { fetchKeyboards } from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -28,7 +28,11 @@ class KeyboardCardList extends Component {
   }
 
   render() {
-    return <Grid columns={4}>{this.renderCards()}</Grid>;
+    return (
+      <Container>
+        <Grid columns={4}>{this.renderCards()}</Grid>
+      </Container>
+    );
   }
 }
 
