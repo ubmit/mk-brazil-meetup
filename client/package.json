@@ -1,13 +1,20 @@
 {
-  "name": "mk-brazil-meetup",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "/api/*": {
+      "target": "http://localhost:5000"
+    }
+  },
   "dependencies": {
+    "axios": "^0.18.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
+    "redux-promise": "^0.6.0",
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.0"
   },

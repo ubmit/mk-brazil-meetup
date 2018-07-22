@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import KeyboardCard from './KeyboardCard';
+import KeyboardCard from '../containers/KeyboardCard';
 import { Container, Grid } from 'semantic-ui-react';
 
 class App extends Component {
