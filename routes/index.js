@@ -6,9 +6,11 @@ require('../models/Keyboard');
 const Keyboard = mongoose.model('keyboards');
 
 router.get('/', (req, res) => {
-  Keyboard.find({}, (err, keyboards) => {
-    res.json(keyboards);
-  });
+  Keyboard.find({})
+    .sort({ size: 1 })
+    .exec((err, keyboards) => {
+      res.json(keyboards);
+    });
 });
 
 router.post('/', (req, res) => {
