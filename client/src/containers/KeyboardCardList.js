@@ -22,7 +22,10 @@ class KeyboardCardList extends Component {
         description,
         owner
       };
-      return <KeyboardCard key={_id} {...cardProps} />;
+
+      if (image) {
+        return <KeyboardCard key={_id} {...cardProps} />;
+      }
     });
   }
 
