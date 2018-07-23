@@ -1,11 +1,15 @@
 import React from 'react';
-import { Card, Icon, Image } from 'semantic-ui-react';
+import { Card, Icon, Image, Modal, Button } from 'semantic-ui-react';
 
 const KeyboardCard = props => {
   const { image, name, description, owner } = props;
   return (
     <Card>
-      <Image src={image} />
+      <Modal trigger={<Image src={image} />} basic size="small">
+        <Modal.Content>
+          <Image src={image} />
+        </Modal.Content>
+      </Modal>
       <Card.Content>
         <Card.Header>{name}</Card.Header>
         <Card.Description>{description}</Card.Description>
