@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import KeyboardCard from '../components/KeyboardCard';
 import Spinner from '../components/Spinner';
-import { Grid, Container, Card } from 'semantic-ui-react';
+import { Container, Card } from 'semantic-ui-react';
 import { fetchKeyboards } from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';

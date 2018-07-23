@@ -2,6 +2,10 @@
   "name": "mk-brazil-meetup",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "10.4.0",
+    "yarn": "1.7.0"
+  },
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
