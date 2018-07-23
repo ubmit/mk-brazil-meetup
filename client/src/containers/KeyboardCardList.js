@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import KeyboardCard from '../components/KeyboardCard';
 import Spinner from '../components/Spinner';
-import { Grid, Container } from 'semantic-ui-react';
+import { Grid, Container, Card } from 'semantic-ui-react';
 import { fetchKeyboards } from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -22,11 +22,7 @@ class KeyboardCardList extends Component {
         description,
         owner
       };
-      return (
-        <Grid.Column key={_id}>
-          <KeyboardCard {...cardProps} />
-        </Grid.Column>
-      );
+      return <KeyboardCard key={_id} {...cardProps} />;
     });
   }
 
@@ -37,7 +33,7 @@ class KeyboardCardList extends Component {
 
     return (
       <Container>
-        <Grid columns={4}>{this.renderCards()}</Grid>
+        <Card.Group itemsPerRow={4}>{this.renderCards()}</Card.Group>
       </Container>
     );
   }
