@@ -1,26 +1,22 @@
 import React from 'react';
 import { Card, Icon, Image, Modal } from 'semantic-ui-react';
+import styled from 'styled-components';
 
-const centerModal = {
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center'
-};
+const StyledModal = styled(Modal)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const KeyboardCard = props => {
   const { image, name, description, owner } = props;
   return (
     <Card>
-      <Modal
-        trigger={<Image src={image} />}
-        basic
-        size="small"
-        style={centerModal}
-      >
-        <Modal.Content>
+      <StyledModal trigger={<Image src={image} />} basic size="small">
+        <StyledModal.Content>
           <Image src={image} />
-        </Modal.Content>
-      </Modal>
+        </StyledModal.Content>
+      </StyledModal>
       <Card.Content>
         <Card.Header>{name}</Card.Header>
         <Card.Description>{description}</Card.Description>
