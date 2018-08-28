@@ -10,23 +10,30 @@ const StyledModal = styled(Modal)`
 
 const KeyboardCard = props => {
   const { image, name, description, owner } = props;
+
+  const extra = (
+    <a>
+      <Icon name="user" />
+      {owner}
+    </a>
+  );
+
+  const cardImage = (
+    <StyledModal trigger={<Image src={image} />} basic size="small">
+      <StyledModal.Content>
+        <Image src={image} />
+      </StyledModal.Content>
+    </StyledModal>
+  );
+
   return (
     <Card>
-      <StyledModal trigger={<Image src={image} />} basic size="small">
-        <StyledModal.Content>
-          <Image src={image} />
-        </StyledModal.Content>
-      </StyledModal>
+      {cardImage}
       <Card.Content>
         <Card.Header>{name}</Card.Header>
         <Card.Description>{description}</Card.Description>
       </Card.Content>
-      <Card.Content extra>
-        <a>
-          <Icon name="user" />
-          {owner}
-        </a>
-      </Card.Content>
+      <Card.Content extra>{extra}</Card.Content>
     </Card>
   );
 };
