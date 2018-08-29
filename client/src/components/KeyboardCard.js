@@ -27,14 +27,12 @@ const KeyboardCard = props => {
   );
 
   return (
-    <Card>
-      {cardImage}
-      <Card.Content>
-        <Card.Header>{name}</Card.Header>
-        <Card.Description>{description}</Card.Description>
-      </Card.Content>
-      <Card.Content extra>{extra}</Card.Content>
-    </Card>
+    <Card
+      image={cardImage}
+      header={name}
+      description={description}
+      extra={extra}
+    />
   );
 };
 
