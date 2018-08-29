@@ -14,16 +14,18 @@ class KeyboardCardList extends Component {
 
   renderCards() {
     const keyboards = this.props.keyboards;
+    const activeTabSize = this.props.activeTabSize;
     return _.map(keyboards, keeb => {
-      const { _id, image, name, description, owner } = keeb;
+      const { _id, image, name, description, owner, size } = keeb;
       const cardProps = {
         image,
         name,
         description,
-        owner
+        owner,
+        size
       };
 
-      if (image) {
+      if (image && size === activeTabSize) {
         return <KeyboardCard key={_id} {...cardProps} />;
       }
     });
@@ -33,6 +35,8 @@ class KeyboardCardList extends Component {
     if (!this.props.keyboards.length) {
       return <Spinner />;
     }
+
+    console.log(this.props);
 
     return (
       <Container>
@@ -44,7 +48,8 @@ class KeyboardCardList extends Component {
 
 const mapStateToProps = state => {
   return {
-    keyboards: state.keyboards
+    keyboards: state.keyboards,
+    activeTabSize: state.activeTabSize
   };
 };
 
