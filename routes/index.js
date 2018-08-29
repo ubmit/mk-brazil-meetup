@@ -25,6 +25,12 @@ router.get('/:keyboardId', (req, res) =>
   })
 );
 
+router.get('/size/:keyboardSize', (req, res) =>
+  Keyboard.find({ size: req.params.keyboardSize }, (err, keyboard) => {
+    res.json(keyboard);
+  })
+);
+
 router.patch('/:keyboardId', (req, res) =>
   Keyboard.findById(req.params.keyboardId, (err, keyboard) => {
     if (req.body._id) {
