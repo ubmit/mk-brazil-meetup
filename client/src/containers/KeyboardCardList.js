@@ -44,8 +44,7 @@ class KeyboardCardList extends Component {
 
 const mapStateToProps = state => {
   return {
-    keyboards: state.keyboards,
-    activeTabSize: state.activeTabSize
+    keyboards: state.keyboards
   };
 };
 

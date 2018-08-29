@@ -12,3 +12,14 @@ export const fetchKeyboards = activeTabSize => {
     payload: request
   };
 };
+
+export const FETCH_SIZES = 'FETCH_SIZES';
+
+export const fetchSizes = () => {
+  const request = axios.get('/api/keyboards/distinct/sizes');
+
+  return {
+    type: FETCH_SIZES,
+    payload: request
+  };
+};

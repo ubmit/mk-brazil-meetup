@@ -31,6 +31,12 @@ router.get('/size/:keyboardSize', (req, res) =>
   })
 );
 
+router.get('/distinct/sizes', (req, res) =>
+  Keyboard.find().distinct('size', (err, keyboards) => {
+    res.json(keyboards);
+  })
+);
+
 router.patch('/:keyboardId', (req, res) =>
   Keyboard.findById(req.params.keyboardId, (err, keyboard) => {
     if (req.body._id) {
