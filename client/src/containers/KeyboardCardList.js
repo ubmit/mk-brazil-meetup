@@ -9,23 +9,21 @@ import _ from 'lodash';
 
 class KeyboardCardList extends Component {
   componentDidMount() {
-    this.props.fetchKeyboards();
+    this.props.fetchKeyboards(this.props.activeTabSize);
   }
 
   renderCards() {
     const keyboards = this.props.keyboards;
-    const activeTabSize = this.props.activeTabSize;
     return _.map(keyboards, keeb => {
-      const { _id, image, name, description, owner, size } = keeb;
+      const { _id, image, name, description, owner } = keeb;
       const cardProps = {
         image,
         name,
         description,
-        owner,
-        size
+        owner
       };
 
-      if (image && size === activeTabSize) {
+      if (image) {
         return <KeyboardCard key={_id} {...cardProps} />;
       }
     });
@@ -35,8 +33,6 @@ class KeyboardCardList extends Component {
     if (!this.props.keyboards.length) {
       return <Spinner />;
     }
-
-    console.log(this.props);
 
     return (
       <Container>

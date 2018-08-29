@@ -1,6 +1,6 @@
 import { ACTIVE_TAB } from '../actions';
 
-export default function(state = 60, action) {
+export default function(state = 0, action) {
   switch (action.type) {
     case ACTIVE_TAB:
       return action.payload;

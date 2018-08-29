@@ -2,8 +2,10 @@ import axios from 'axios';
 
 export const FETCH_KEYBOARDS = 'FETCH_KEYBOARDS';
 
-export const fetchKeyboards = () => {
-  const request = axios.get('/api/keyboards');
+export const fetchKeyboards = activeTabSize => {
+  const rootUrl = '/api/keyboards';
+  const url = activeTabSize ? `${rootUrl}/size/${activeTabSize}` : rootUrl;
+  const request = axios.get(url);
 
   return {
     type: FETCH_KEYBOARDS,
