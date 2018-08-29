@@ -26,8 +26,8 @@ router.get('/:keyboardId', (req, res) =>
 );
 
 router.get('/size/:keyboardSize', (req, res) =>
-  Keyboard.find({ size: req.params.keyboardSize }, (err, keyboard) => {
-    res.json(keyboard);
+  Keyboard.find({ size: req.params.keyboardSize }, (err, keyboards) => {
+    res.json(keyboards);
   })
 );
 

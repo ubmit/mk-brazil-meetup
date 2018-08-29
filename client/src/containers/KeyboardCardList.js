@@ -9,7 +9,7 @@ import _ from 'lodash';
 
 class KeyboardCardList extends Component {
   componentDidMount() {
-    this.props.fetchKeyboards(this.props.activeTabSize);
+    this.props.fetchKeyboards(null);
   }
 
   renderCards() {

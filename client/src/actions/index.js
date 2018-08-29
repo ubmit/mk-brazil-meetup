@@ -12,12 +12,3 @@ export const fetchKeyboards = activeTabSize => {
     payload: request
   };
 };
-
-export const ACTIVE_TAB = 'ACTIVE_TAB';
-
-export const activeTab = size => {
-  return {
-    type: ACTIVE_TAB,
-    payload: size
-  };
-};
