@@ -31,8 +31,12 @@ router.get('/size/:keyboardSize', (req, res) =>
   })
 );
 
-router.get('/distinct/sizes', (req, res) =>
-  Keyboard.find().distinct('size', (err, keyboards) => {
+router.get('/distinct/sizes', (_, res) =>
+  Keyboard.find().distinct('size', (_, keyboards) => {
+    keyboards.sort((a, b) => {
+      return a - b;
+    });
+
     res.json(keyboards);
   })
 );
