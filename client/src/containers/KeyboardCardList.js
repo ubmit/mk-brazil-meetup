@@ -6,6 +6,13 @@ import { fetchKeyboards } from '../actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import _ from 'lodash';
+import styled from 'styled-components';
+
+const Empty = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 class KeyboardCardList extends Component {
   componentDidMount() {
@@ -32,6 +39,18 @@ class KeyboardCardList extends Component {
   render() {
     if (!this.props.keyboards.length) {
       return <Spinner />;
+    }
+
+    const isEmpty = this.props.keyboards.map(({ image }) => {
+      return image === '';
+    });
+
+    const checkImage = emptyBoolean => {
+      return emptyBoolean;
+    };
+
+    if (isEmpty.every(checkImage)) {
+      return <Empty>There aren't keyboards to be displayed</Empty>;
     }
 
     return (
