@@ -12,7 +12,7 @@ Inside React, the data is fetched using Axios and then, before it arrives at a c
 The UI was made using Semantic UI and styled-components.
 
 ## Work in progress
-Now I'm working towards a filter structure.
+* Filter structure - :heavy_check_mark:
 
 ## Starting the application
 
