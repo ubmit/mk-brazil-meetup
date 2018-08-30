@@ -11,9 +11,6 @@ Mongoose was basically used to make model-related stuff easier.
 Inside React, the data is fetched using Axios and then, before it arrives at a container, it is handled by Redux.
 The UI was made using Semantic UI and styled-components.
 
-## Work in progress
-* Filter structure - :heavy_check_mark:
-
 ## Starting the application
 
 ```
